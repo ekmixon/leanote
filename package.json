@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "devDependencies": {
-    "gulp": "^3.8.7",
+    "gulp": "^4.0.0",
     "gulp-uglify": "^1.0.0",
     "gulp-clean": "^0.3.1",
     "gulp-util": "^3.0.1",
@@ -18,5 +18,13 @@
   "license": "GPL v2",
   "bugs": {
     "url": "https://github.com/leanote/leanote/issues"
+  },
+  "scripts": {
+    "prepublish": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
+  },
+  "snyk": true,
+  "dependencies": {
+    "@snyk/protect": "latest"
   }
 }
